@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>08 - Hero Section - Sebelum</title>
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Pada elemen <header>, atur height: 100vh agar memenuhi tinggi layar.
+    2. Tambahkan background-image pada <header>. Agar gambar tidak belang, gunakan background-size: cover dan background-position: center.
+    3. Agar teks mudah dibaca di atas gambar, tambahkan overlay linear-gradient pada property background-image (misal rgba hitam ke rgba hitam transparan).
+    4. Gunakan Flexbox pada <header> (display: flex, flex-direction: column, justify-content: center, align-items: center) agar konten tepat di tengah.
+    5. Ubah warna teks menjadi putih dan styling tombol (padding, background, border-radius).
+    -->
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Hero Section</title>
+
+    <style>
+        header {
+            height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        header a {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        header a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Selamat Datang</h1>
+        <p>Temukan pengalaman terbaik bersama kami</p>
+        <a href="#">Mulai Sekarang</a>
+    </header>
+
+</body>
+</html>
+    

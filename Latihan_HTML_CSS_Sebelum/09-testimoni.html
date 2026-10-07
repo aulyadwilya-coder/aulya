@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>09 - Testimoni - Sebelum</title>
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Atur container ".testimonial-grid" menggunakan CSS Grid. Gunakan grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) dan beri gap.
+    2. Berikan gaya pada kartu (background, padding, border-radius, shadow ringan).
+    3. Buat posisi kartu menjadi "position: relative". 
+    4. Gunakan pseudo-element "::before" pada kartu untuk menambahkan karakter tanda kutip besar (content: '"') di pojok kiri atas sebagai watermark (ukuran sangat besar, warna sangat pudar, z-index rendah).
+    5. Rapikan elemen gambar profil dan nama (bisa menggunakan flexbox untuk menjejerkannya secara horizontal).
+    -->
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Testimonial Grid</title>
+
+    <style>
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 120px;
+            color: rgba(0, 0, 0, 0.05);
+            z-index: 0;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile h3 {
+            margin: 0;
+        }
+
+        .profile p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        .testimonial-card > p {
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=1" alt="Profil">
+                <div>
+                    <h3>Aulia</h3>
+                    <p>Mahasiswa</p>
+                </div>
+            </div>
+
+            <p>
+                Pelayanannya sangat bagus dan hasilnya sesuai dengan yang saya harapkan.
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=2" alt="Profil">
+                <div>
+                    <h3>Siti</h3>
+                    <p>Mahasiswa</p>
+                </div>
+            </div>
+
+            <p>
+                Saya sangat puas dengan pelayanan yang diberikan. Prosesnya cepat dan mudah.
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=3" alt="Profil">
+                <div>
+                    <h3>Nazwa</h3>
+                    <p>Pelajar</p>
+                </div>
+            </div>
+
+            <p>
+                Pengalaman yang sangat menyenangkan. Saya akan menggunakan layanan ini lagi.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+    
