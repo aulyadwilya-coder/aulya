@@ -1,0 +1,393 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fff8fc;
+    color: #536b91;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.hero {
+    min-height: 155px;
+    padding: 28px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(120deg, #ffdeeb, #d9efff, #fff0f7);
+    border-bottom: 2px solid #f8dbe9;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.flower {
+    font-size: 48px;
+}
+
+.hero h1 {
+    color: #4d638b;
+    font-size: clamp(24px, 3vw, 36px);
+    margin-bottom: 5px;
+}
+
+.hero p {
+    color: #7189ad;
+    font-size: 15px;
+}
+
+.hero-flowers {
+    font-size: 42px;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* LAYOUT */
+.layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: start;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: linear-gradient(180deg, #fffafd, #ffedf5);
+    padding: 22px 18px;
+    border: 1px solid #f8d7e8;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px rgba(217, 154, 190, 0.12);
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #526b94;
+}
+
+.menu,
+.submenu {
+    list-style: none;
+}
+
+.menu > li {
+    margin-bottom: 5px;
+}
+
+.menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 9px;
+    color: #536b91;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.menu > li > a span {
+    width: 23px;
+    height: 23px;
+    min-width: 23px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #dceeff;
+    border-radius: 50%;
+    color: #567ba8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu > li:nth-child(odd) > a span {
+    background: #ffd7e8;
+    color: #c25e92;
+}
+
+.menu > li > a:hover {
+    background: #fbdce9;
+    color: #bd5d91;
+    transform: translateX(3px);
+}
+
+.submenu {
+    margin: 5px 0 10px 35px;
+    padding-left: 10px;
+    border-left: 2px solid #d9eaff;
+}
+
+.submenu li a {
+    display: block;
+    padding: 4px 2px;
+    color: #7087a9;
+    text-decoration: none;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+    transition: 0.2s;
+}
+
+.submenu li a:hover {
+    color: #d66d9f;
+    padding-left: 7px;
+}
+
+.sidebar-flower {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* KONTEN */
+.content {
+    min-width: 0;
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #e4edf9;
+    border-radius: 24px;
+    box-shadow: 0 5px 22px rgba(127, 163, 203, 0.10);
+}
+
+.welcome {
+    margin-bottom: 22px;
+}
+
+.welcome h2 {
+    font-size: 27px;
+    color: #4d638b;
+    margin-bottom: 7px;
+}
+
+.welcome p {
+    color: #7d91b0;
+}
+
+/* MATERI */
+.materi {
+    background: linear-gradient(120deg, #f2f8ff, #fffafd);
+    border: 1px solid #d9eaff;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.materi h2,
+.preview h2 {
+    font-size: 21px;
+    color: #526b94;
+    margin-bottom: 20px;
+}
+
+.materi-list {
+    display: grid;
+    gap: 12px;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.materi-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #526b94;
+}
+
+.materi-item span {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: #ffb9d5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.materi-item:nth-child(even) span {
+    background: #b8ddff;
+    color: #527aa7;
+}
+
+.decor-flower {
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    font-size: clamp(60px, 9vw, 115px);
+    opacity: 0.65;
+}
+
+/* PREVIEW */
+.preview {
+    padding: 24px;
+    border: 1px solid #f9d9e9;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff5fa, #fffafd);
+    margin-bottom: 22px;
+}
+
+.preview-content {
+    min-height: 170px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    flex-wrap: wrap;
+    border: 1px solid #ffe1ed;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.laptop {
+    position: relative;
+    font-size: 75px;
+}
+
+.laptop span {
+    position: absolute;
+    top: 18px;
+    left: 27px;
+    font-size: 24px;
+    color: #ee8db8;
+}
+
+blockquote {
+    max-width: 380px;
+    color: #536f98;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.heart {
+    margin-top: 8px;
+    color: #ee8db8;
+    font-size: 22px;
+}
+
+.preview-flower {
+    font-size: 55px;
+}
+
+/* MOTIVASI */
+.motivation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(100deg, #e7f3ff, #f5faff);
+    border: 1px solid #d4e8ff;
+    border-radius: 16px;
+    color: #5c82b2;
+}
+
+.bulb {
+    font-size: 28px;
+}
+
+.motivation p {
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 22px 10px 5px;
+    font-size: 13px;
+    color: #a07d9a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 18px;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .content {
+        padding: 18px;
+    }
+
+    .hero-flowers {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        padding: 22px 18px;
+    }
+
+    .hero-content {
+        gap: 10px;
+    }
+
+    .flower {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero-flowers {
+        display: none;
+    }
+
+    .content {
+        padding: 14px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .materi,
+    .preview {
+        padding: 16px;
+    }
+
+    .preview-content {
+        padding: 18px 10px;
+        gap: 15px;
+    }
+
+    blockquote {
+        font-size: 15px;
+    }
+}
