@@ -1,0 +1,111 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f601;
+    color: #212501;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #245501;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+.periode {
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.periode {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #245501;
+    padding: 10px;
+}
+
+th {
+    background-color: #596301;
+    color: white;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9ee01;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+td:first-child {
+    text-align: center;
+    width: 100px;
+}
+
+td:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.total {
+    font-weight: bold;
+    background-color: #cbd5e1 !important;
+    border-top: 3px solid #245501;
+}
+
+.total td {
+    font-weight: bold;
+}
+
+.total-label {
+    text-align: right;
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 15px;
+    }
+
+    th,
+    td {
+        padding: 7px 5px;
+        font-size: 12px;
+    }
+
+    h1,
+    h2 {
+        font-size: 18px;
+    }
+}

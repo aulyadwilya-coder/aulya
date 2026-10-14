@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Jurnal Umum</title>
+
+    <link rel="stylesheet" href="jurnal_umum.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>FORM INPUT JURNAL UMUM</h1>
+        <p class="subtitle">Masukkan data transaksi keuangan</p>
+
+        <form id="formJurnal">
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Transaksi</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bukti">No. Bukti</label>
+                <input type="text" id="bukti" name="bukti"
+                       placeholder="Contoh: TRX-001" required>
+            </div>
+
+            <div class="form-group">
+                <label for="keterangan">Keterangan</label>
+                <textarea id="keterangan" name="keterangan"
+                          placeholder="Masukkan keterangan transaksi..."
+                          required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="akun">Nama Akun</label>
+                <select id="akun" name="akun" required>
+                    <option value="">-- Pilih Nama Akun --</option>
+                    <option value="Kas">Kas</option>
+                    <option value="Piutang">Piutang</option>
+                    <option value="Perlengkapan">Perlengkapan</option>
+                    <option value="Utang">Utang</option>
+                    <option value="Modal">Modal</option>
+                    <option value="Pendapatan">Pendapatan</option>
+                    <option value="Beban">Beban</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Posisi Saldo</label>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="posisi"
+                               value="Debit" checked>
+                        Debit
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="posisi"
+                               value="Kredit">
+                        Kredit
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nominal">Nominal (Rp)</label>
+                <input type="number" id="nominal" name="nominal"
+                       placeholder="Masukkan nominal"
+                       min="1" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-simpan">
+                    SIMPAN TRANSAKSI
+                </button>
+
+                <button type="reset" class="btn-batal">
+                    BATAL
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formJurnal").addEventListener(
+            "submit", function(event) {
+                event.preventDefault();
+                alert("Data transaksi berhasil divalidasi!");
+                this.reset();
+            }
+        );
+    </script>
+
+</body>
+</html>
